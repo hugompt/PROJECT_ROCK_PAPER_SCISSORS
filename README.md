@@ -1,11 +1,11 @@
 PROJECT_ROCK_PAPER_SCISSORS
 ===========================
 
-### Started: _23/02/2022_
-### Concluded: TBD
+### Started: _23/02/2022_ ###
+### Concluded: TBD ###
 
-#### CHANGELOG
-##### 3#UPDATE | 23/02/2022
+#### CHANGELOG ####
+##### 3#UPDATE | 23/02/2022 #####
         Done:
             - Added code to the main.js file;
                 - Created global variables;
@@ -15,7 +15,8 @@ PROJECT_ROCK_PAPER_SCISSORS
         ToDo:
             - Add code to the style.css file;
             - Add code to the index.html file;
-#### 2#UPDATE | 23/02/2022
+
+##### 2#UPDATE | 23/02/2022 #####
         Done:
             - Create function computerPlay(), will randomly return either "Rock", "Paper" or "Scissors";
             - Write a function that plays a single round of Rock Paper Scissors.
@@ -25,7 +26,8 @@ PROJECT_ROCK_PAPER_SCISSORS
                 - Write function called game(). Call the playRound function inside of this one to play a 5 round game that keeps score and reports a winner or loser at the end;
             - Add code to the style.css file;
             - Add code to the index.html file;
-#### 1#UPDATE | 23/02/2022
+
+##### 1#UPDATE | 23/02/2022 #####
         Done:
             - Created the initial files required to code the website;
             - Added the respective calls for the files in the index.html;

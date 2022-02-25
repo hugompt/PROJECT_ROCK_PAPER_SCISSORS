@@ -1,9 +1,18 @@
-
+*{
+    border: 2px solid red;
+}
 html{
     background-color: black;
     color: white;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px),
+      linear-gradient(335deg, black 23px, transparent 23px),
+      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 }
 
 .header{
@@ -20,7 +29,7 @@ html{
 .btn {
     width: 129px;
     height: 106.50px;
-    border: none;
+    border: 2px solid greenyellow;
     outline: none;
     color: #fff;
     cursor: pointer;
@@ -80,23 +89,38 @@ html{
     border-radius: 35px;
 }
 
+.displayName{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px rgb(0, 238, 28);
+}
+
+.vs{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: 50px;
+    margin-top: 80px;;
+    font-weight: 600;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+}
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
   
-  body {
-    background-color: #141114;
-    background-image: linear-gradient(335deg, black 23px, transparent 23px),
-      linear-gradient(155deg, black 23px, transparent 23px),
-      linear-gradient(335deg, black 23px, transparent 23px),
-      linear-gradient(155deg, black 23px, transparent 23px);
-    background-size: 58px 58px;
-    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-  }
-  
-  .header {
+.header {
     position: relative;
     flex-shrink: 0;
     margin-top: 10%;

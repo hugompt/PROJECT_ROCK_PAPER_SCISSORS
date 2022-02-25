@@ -25,6 +25,7 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
         if(playerSelection === computerSelection){
             roundsHistoric.textContent += "DRAW - Both you and the CPU picked " + 
             playerSelection +"!";
+            roundsHistoric.scrollTop = roundsHistoric.scrollHeight;
             // alert("DRAW! Close but not enough! Both you and the CPU picked " + 
             //     playerSelection);
             return "DRAW"
@@ -33,9 +34,11 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
                     || playerSelection === "SCISSORS" && computerSelection === "PAPER"){
                         roundsHistoric.textContent += "WON - Your " + playerSelection + " beats CPU's " + 
                         computerSelection +"!";
+                        roundsHistoric.scrollTop = roundsHistoric.scrollHeight;
                         playerScore++;
-                        playerScoreText.textContent = playerScoreText.textContent.replace(/.$/,playerScore);
-                        console.log(playerScore);
+                        if(playerScoreText.textContent.length === 13){
+                            playerScoreText.textContent = playerScoreText.textContent.replace(/.$/,playerScore);
+                        }else{playerScoreText.textContent = playerScoreText.textContent.replace(/..$/,playerScore);}
                         // alert("YOU WIN!!! Your " + playerSelection + " beats CPU's " + 
                         //         computerSelection +"!");
                         return "HUMAN"
@@ -44,8 +47,11 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
                     || playerSelection === "SCISSORS" && computerSelection === "ROCK"){
                         roundsHistoric.textContent += "LOST - The CPU's " + computerSelection + " beats your " + 
                         playerSelection + "!";
+                        roundsHistoric.scrollTop = roundsHistoric.scrollHeight;
                         computerScore++;
-                        cpuScoreText.textContent = cpuScoreText.textContent.replace(/.$/,computerScore);
+                        if(cpuScoreText.textContent.length === 14){
+                            cpuScoreText.textContent = cpuScoreText.textContent.replace(/.$/,computerScore);
+                        }else{cpuScoreText.textContent = cpuScoreText.textContent.replace(/..$/,computerScore);}
                         // alert("YOU LOSE! The CPU's " + computerSelection + " beats your " + 
                         //         playerSelection + ", try again!");
                         return "CPU"

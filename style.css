@@ -62,7 +62,7 @@ html{
 
 .btn:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #ff0000);
     position: absolute;
     top: -2px;
     left:-2px;
@@ -72,14 +72,14 @@ html{
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: glowing 20s linear infinite;
-    opacity: 0;
+    opacity: 1;
     transition: opacity .3s ease-in-out;
     border-radius: 25px;
 }
 
 .btn:hover:before {
     opacity: 1;
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .btn:after {
@@ -101,19 +101,25 @@ html{
 .displayName{
     display: flex;
     justify-content: center;
-    font-size: 50px;
+    font-size: 60px;
     margin: 20px;
     font-weight: 700;
     text-shadow: 2px 2px rgb(0, 238, 28);
 }
 
-#roundsHist{
+.roundsTitle{
   margin-top: 20px;
+  margin-left: 5%;
+  position:absolute;
+}
+#roundsHist{
+    margin-top: 50px;
     margin-left: 5%;
     position:absolute;
-    height: 300px;
+    height: 200px;
+    overflow: -moz-scrollbars-vertical;
     overflow-y:scroll;
-    overflow-wrap: normal;
+
 }
 
 .colorGreen{

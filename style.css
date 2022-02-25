@@ -107,6 +107,19 @@ html{
     text-shadow: 2px 2px rgb(0, 238, 28);
 }
 
+#roundsHist{
+  margin-top: 20px;
+    margin-left: 5%;
+    position:absolute;
+    height: 300px;
+    overflow-y:scroll;
+    overflow-wrap: normal;
+}
+
+.colorGreen{
+  color: #24ff24;
+}
+
 .vs{
     display: flex;
     font-size: 40px;
@@ -120,6 +133,7 @@ html{
 
 .footer{
     display: flex;
+    align-items: flex-end;
     width: 100%;
     bottom: 0;
     position: absolute;

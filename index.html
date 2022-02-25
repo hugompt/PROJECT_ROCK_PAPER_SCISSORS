@@ -7,7 +7,7 @@
     <title>ROCK_PAPER_SCISSORS</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./main.js" defer></script>
 </head>
 <body>
     <div class="header">
@@ -25,8 +25,9 @@
             <button id="paper"  class="btn paper">PAPER</button>
             <button id="scissors"   class="btn scissors">SCISSORS</button>
         </div>
-        <div class="playerScore">YOUR SCORE: </div>
-        <div class="cpuScore">CPU's SCORE: </div>
+        <div class="playerScore">YOUR SCORE: 0</div>
+        <div class="cpuScore">CPU's SCORE: 0</div>
+        <div id="roundsHist">ROUNDS PLAYED: </div>
         <div class="vs">VS</div>
         <div class="displayName CPU">CPU</div>
         <div class = "btnCont">

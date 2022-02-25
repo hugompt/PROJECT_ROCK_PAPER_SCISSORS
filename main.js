@@ -17,6 +17,11 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
         return (strMoves[Math.floor(Math.random() * 3)]);
     }
 
+//Function to start a new game
+    function newGame(){
+        document.location.reload();
+    }
+
 //Function to play a single round of Rock Paper Scissors VS the CPU;
     function playRound (playerSelection, computerSelection){
         playerSelection = playerSelection.toUpperCase();
@@ -39,8 +44,7 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
                         if(playerScoreText.textContent.length === 13){
                             playerScoreText.textContent = playerScoreText.textContent.replace(/.$/,playerScore);
                         }else{playerScoreText.textContent = playerScoreText.textContent.replace(/..$/,playerScore);}
-                        // alert("YOU WIN!!! Your " + playerSelection + " beats CPU's " + 
-                        //         computerSelection +"!");
+                        playerScore === 5 ? modalWin() : null ;
                         return "HUMAN"
         }else if (playerSelection === "ROCK" && computerSelection === "PAPER" 
                     || playerSelection === "PAPER" && computerSelection === "SCISSORS" 
@@ -52,8 +56,7 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
                         if(cpuScoreText.textContent.length === 14){
                             cpuScoreText.textContent = cpuScoreText.textContent.replace(/.$/,computerScore);
                         }else{cpuScoreText.textContent = cpuScoreText.textContent.replace(/..$/,computerScore);}
-                        // alert("YOU LOSE! The CPU's " + computerSelection + " beats your " + 
-                        //         playerSelection + ", try again!");
+                        computerScore === 5 ? modalLose() : null;
                         return "CPU"
         }else{
             alert("WARNING! Please enter a valid response: 'Rock' or 'Paper'" +
@@ -89,14 +92,38 @@ roundsHistoric.setAttribute('style', 'white-space: pre;')
         document.getElementById("rock").onclick = function(){playRound(document.getElementById("rock").getAttribute('id'),computerPlay());};
         document.getElementById("paper").onclick = function(){playRound(document.getElementById("paper").getAttribute('id'),computerPlay());};
         document.getElementById("scissors").onclick = function(){playRound(document.getElementById("scissors").getAttribute('id'),computerPlay());};       
-     
-        // Swal.fire({
-        //     title: 'Error!',
-        //     text: 'Do you want to continue',
-        //     icon: 'error',
-        //     confirmButtonText: 'Cool'
-        //  })
+
+
     };
    
+    function modalWin (){
+        let replay = Swal.fire({
+                        title: 'YOU WON!',
+                        text: 'Do you want to play again?',
+                        icon: 'success',
+                        confirmButtonText: 'YES!',
+                        confirmButtonColor: 'green',
+                        showCancelButton: 'true',
+                        cancelButtonColor: 'green',
+                        cancelButtonText: 'OH YEAH!',
+                        backdrop: true,
+                        allowOutsideClick: false
+                    }).then((result) => newGame())
+    }
+
+    function modalLose(){
+        let replay = Swal.fire({
+                        title: 'YOU LOST!',
+                        text: 'Do you want to play again?',
+                        icon: 'error',
+                        confirmButtonText: 'YES!',
+                        confirmButtonColor: 'green',
+                        showCancelButton: 'true',
+                        cancelButtonText: 'OH YEAH!',
+                        cancelButtonColor: 'green',
+                        backdrop: true,
+                        allowOutsideClick: false
+                    }).then((result) => newGame());
+    }
   
     

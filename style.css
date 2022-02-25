@@ -69,10 +69,6 @@ html{
     background-image: url(./img/.rock.png);
 }
 
-.btn:active {
-    color: #000
-}
-
 .btn:active:after {
     background: transparent;
 }

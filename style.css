@@ -1,8 +1,16 @@
+*{
+    border: 1px solid red;
+}
 html{
     background-color: black;
     color: white;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
 }
 
 .btnCont{
@@ -17,7 +25,6 @@ html{
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -45,6 +52,10 @@ html{
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 25px;
+}
+
+.rock{
+    background-image: url(./img/.rock.png);
 }
 
 .btn:active {

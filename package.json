@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "sweetalert2": "^11.4.4"
   }

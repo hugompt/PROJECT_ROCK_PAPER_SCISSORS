@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2'
+//import Swal from 'sweetalert2';
 
 //Global variables
 let playerScore = 0;
@@ -8,6 +8,7 @@ let roundWinner = " ";
 //Function for randomly choosing a computer play between 3 possible options, Rock, Paper, Scissors;
     function computerPlay (){
         const strMoves = ["Rock","Paper","Scissors"];
+
         return (strMoves[Math.floor(Math.random() * 3)]);
     }
 
@@ -68,24 +69,13 @@ let roundWinner = " ";
         document.getElementById("paper").onclick = function(){playRound(document.getElementById("paper").getAttribute('id'),computerPlay());};
         document.getElementById("scissors").onclick = function(){playRound(document.getElementById("scissors").getAttribute('id'),computerPlay());};
         
-        Swal.fire({
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'Cool'
-          })
+        // Swal.fire({
+        //     title: 'Error!',
+        //     text: 'Do you want to continue',
+        //     icon: 'error',
+        //     confirmButtonText: 'Cool'
+        //  })
     };
-
-    function functionAlert(msg, myYes) {
-        let confirmBox = $("#confirm");
-        confirmBox.find(".message").text(msg);
-        confirmBox.find(".yes").unbind().click(function() {
-           confirmBox.hide();
-        });
-        confirmBox.find(".yes").click(myYes);
-        confirmBox.show();
-     }
-
    
   
     

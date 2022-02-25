@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 //Global variables
 let playerScore = 0;
 let computerScore = 0;
@@ -65,5 +67,25 @@ let roundWinner = " ";
         document.getElementById("rock").onclick = function(){playRound(document.getElementById("rock").getAttribute('id'),computerPlay());};
         document.getElementById("paper").onclick = function(){playRound(document.getElementById("paper").getAttribute('id'),computerPlay());};
         document.getElementById("scissors").onclick = function(){playRound(document.getElementById("scissors").getAttribute('id'),computerPlay());};
+        
+        Swal.fire({
+            title: 'Error!',
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+          })
     };
+
+    function functionAlert(msg, myYes) {
+        let confirmBox = $("#confirm");
+        confirmBox.find(".message").text(msg);
+        confirmBox.find(".yes").unbind().click(function() {
+           confirmBox.hide();
+        });
+        confirmBox.find(".yes").click(myYes);
+        confirmBox.show();
+     }
+
+   
+  
     

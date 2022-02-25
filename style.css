@@ -42,22 +42,22 @@ html{
     border-radius: 10px;
     background-repeat: no-repeat;
     align-items: center;
-    line-height: 13em;
+    /* line-height: 13em; */
     font-weight: 700;
     font-size: 20px;
     background-size: 100%;
 }
 
 .rock{
-  background-image: url("./img/rock.png");
+  background-image: url("./imgs/rock.png");
 }
 
 .paper{
-  background-image: url("./img/paper.png");
+  background-image: url("./imgs/paper.png");
 }
 
 .scissors{
-  background-image: url("./img/scissors.png");
+  background-image: url("./imgs/scissors.png");
 }
 
 .btn:before {
@@ -77,12 +77,9 @@ html{
     border-radius: 25px;
 }
 
-.btn:active:after {
-    background: transparent;
-}
-
 .btn:hover:before {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .btn:after {
@@ -95,6 +92,10 @@ html{
     left: 0;
     top: 0;
     border-radius: 35px;
+}
+
+.cpuBtn:hover{
+  cursor:not-allowed;
 }
 
 .displayName{

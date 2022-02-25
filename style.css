@@ -48,6 +48,18 @@ html{
     background-size: 100%;
 }
 
+.rock{
+  background-image: url("./img/rock.png");
+}
+
+.paper{
+  background-image: url("./img/paper.png");
+}
+
+.scissors{
+  background-image: url("./img/scissors.png");
+}
+
 .btn:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -63,10 +75,6 @@ html{
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 25px;
-}
-
-.rock{
-    background-image: url(./img/.rock.png);
 }
 
 .btn:active:after {
